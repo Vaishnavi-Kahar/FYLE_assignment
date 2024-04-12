@@ -1,12 +1,8 @@
-# Tax Calculator Website
+# Tax Calculator App
 
-This project is a web-based Tax Calculator designed to help users calculate their income tax based on their input. The calculator follows specific rules outlined in the challenge outline and provides real-time error validation to ensure accurate input from users.
+## Overview
 
-## Assumptions
-
-- Users are familiar with the terms "Gross Annual Income," "Extra Income," "Age Group," and "Total Applicable Deductions."
-- The tax calculation follows the provided formula strictly.
-- The design and layout are kept simple for clarity and ease of use.
+The Tax Calculator App is a web-based application designed to help users calculate their income tax based on their gross annual income, extra income, age group, and applicable deductions. The app follows specific tax calculation formulas based on the user's age and total income. It provides real-time error validation to ensure accurate input and displays the calculated tax amount in a modal dialog.
 
 ## Technologies Used
 
@@ -14,45 +10,54 @@ This project is a web-based Tax Calculator designed to help users calculate thei
 - CSS
 - JavaScript
 - Bootstrap 4
-- jQuery
 
-## Instructions to Run Locally
+## References & Requirements
 
-1. Clone the repository to your local machine: ```git clone https://github.com/Vaishnavi-Kahar/FYLE_assignment.git```
+### Tax Calculation Formula
 
-2. Navigate to the project directory: ```cd tax-calculator```
+- Overall income (after deductions) under 8 (≤) Lakhs is not taxed.
+- Income over 8 (>) Lakhs is taxed based on the following rates:
+  - 30% for people with age < 40
+  - 40% for people with age ≥ 40 but < 60
+  - 10% for people with age ≥ 60
 
-3. Open the `index.html` file in your preferred web browser.
+### Requirements
 
-## Features
+- Allow users to input gross annual income, extra income, age group, and deductions.
+- Highlight error icons for incorrect values in number fields and show tooltips when clicked.
+- Age dropdown field must have three values: <40, ≥ 40 & < 60, and ≥ 60.
+- Display error icons and tooltips for mandatory input fields if user attempts to submit without entering values.
+- Modal should display the calculated tax amount and income after deductions upon submission.
 
-- User-friendly interface for inputting gross annual income, extra income, age group, and deductions.
-- Real-time error validation with error icons and tooltips.
-- Calculation of income tax based on provided information.
-- Modal display of the calculated tax amount and income after deductions.
+## Example
 
-## Project Structure
+Suppose a user, aged 34, has a gross annual income of 40 Lakhs with no deductions. The tax calculation would be: 30% * (40 - 8) = 9.6 Lakhs.
 
-- `index.html`: Main HTML file containing the structure of the web page and form elements.
-- `styles.css`: CSS file for styling the HTML elements.
-- `script.js`: JavaScript file containing the logic for error validation, calculation, and modal functionality.
-- `README.md`: Documentation file providing an overview of the project and instructions for running it locally.
+## Edge Cases Covered
 
-## Testing
+### 1. Non-Numeric Input Handling
 
-### Edge Cases
+To prevent users from entering non-numeric values in number fields, the app employs client-side validation. Error icons are displayed with a message below the input fields, indicating invalid input. 
 
-- Entering non-numeric values in number fields.
-- Not selecting an age group before submitting the form.
+### 2. Age Group Selection
 
-All edge cases have been thoroughly tested and handled in the codebase.
+The age dropdown field requires users to select one of the three provided options: <40, ≥ 40 & < 60, or ≥ 60. If a user attempts to submit the form without selecting an age group, an error icon appears next to the dropdown field, indicating that the input is mandatory.
 
-## Screenshots
-![Screenshot 1](path/to/screenshot1.png)
+### 3. Income Exceeding 8 Lakhs
 
+When the total income (after deductions) exceeds 8 Lakhs, the app correctly calculates the tax amount based on the user's age group and income level. The tax rates are applied as per the specified formula, ensuring accurate tax calculation for different age groups.
+
+## Installation Instructions
+
+1. Clone the repository: `git clone https://github.com/Vaishnavi-Kahar/FYLE_assignment.git`
+2. Navigate to the project directory.
+3. Open `index.html` in a web browser.
 
 ## Live Demo
 
-A live demo of the Tax Calculator website is available [here](#).
+[https://vaishnavi-kahar.github.io/FYLE_assignment/]
 
+
+
+- Vaishnavi Kahar
 
