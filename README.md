@@ -39,29 +39,40 @@ Suppose a user, aged 34, has a gross annual income of 40 Lakhs with no deduction
 
 The age dropdown field requires users to select one of the three provided options: <40, ≥ 40 & < 60, or ≥ 60.
 
+![Age group Screenshot](/screenshots/ageGroup.png)
+
 ### 2. Tax Calculation for Income Less than 8 Lakhs (No Tax Deducted)
 
 When the total income (after deductions) is less than 8 Lakhs, no tax is deducted. The app correctly handles this scenario and displays a message indicating that no tax is deducted. Below is a screenshot of this scenario:
 
-![No Tax Deducted Screenshot](https://example.com/no_tax_deducted.png)
+![No Tax Deducted Screenshot](/screenshots/noTax1.png)
+![No Tax Deducted Screenshot](/screenshots/noTax2.png)
 
 ### 3. Tax Calculation for Income Exceeding 8 Lakhs
 
 When the total income (after deductions) exceeds 8 Lakhs, the app correctly calculates the tax amount based on the user's age group and income level. The tax amount is deducted from the total income, and the remaining income after tax deduction is displayed on a modal. Below is a screenshot of this scenario:
 
-![Tax Calculation Exceeding 8 Lakhs Screenshot](https://example.com/tax_exceeding_8_lakhs.png)
+![Tax Calculation Exceeding 8 Lakhs Screenshot](/screenshots/Tax1.png)
+![Tax Calculation Exceeding 8 Lakhs Screenshot](/screenshots/Tax2.png)
 
-### 6. Handling Invalid Fields
+
+### 4. Handling Invalid Fields
 
 The app validates input fields to ensure that only numeric values are entered in number fields. If a user enters invalid input, error icons are displayed below the respective input fields, indicating the error. Below is a screenshot illustrating this scenario:
 
-![Invalid Fields Screenshot](https://example.com/invalid_fields.png)
+![Invalid Fields Screenshot](/screenshots/invalid.png)
 
-### 7. Handling Required Inputs
+### 5. Handling Required Inputs
 
 The app ensures that all mandatory fields, such as the age group selection, are filled before submission. If a user attempts to submit the form without filling out required fields, a message is displayed prompting the user to fill the missing fields. Below is a screenshot depicting this scenario:
 
-![Required Inputs Missing Screenshot](https://example.com/required_inputs_missing.png)
+![Required Inputs Missing Screenshot](/screenshots/mandatory.png)
+
+### 6. What each field is about
+
+The app has question-mark icon next to each field title which diplays what that field is about when clicked on, and stays for 3 seconds.
+
+![Question Screenshot](/screenshots/question.png)
 
 ## Installation Instructions
 
