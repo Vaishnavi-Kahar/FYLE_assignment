@@ -35,17 +35,33 @@ Suppose a user, aged 34, has a gross annual income of 40 Lakhs with no deduction
 
 ## Edge Cases Covered
 
-### 1. Non-Numeric Input Handling
+### 1. Age Group Selection
 
-To prevent users from entering non-numeric values in number fields, the app employs client-side validation. Error icons are displayed with a message below the input fields, indicating invalid input. 
+The age dropdown field requires users to select one of the three provided options: <40, ≥ 40 & < 60, or ≥ 60.
 
-### 2. Age Group Selection
+### 2. Tax Calculation for Income Less than 8 Lakhs (No Tax Deducted)
 
-The age dropdown field requires users to select one of the three provided options: <40, ≥ 40 & < 60, or ≥ 60. If a user attempts to submit the form without selecting an age group, an error icon appears next to the dropdown field, indicating that the input is mandatory.
+When the total income (after deductions) is less than 8 Lakhs, no tax is deducted. The app correctly handles this scenario and displays a message indicating that no tax is deducted. Below is a screenshot of this scenario:
 
-### 3. Income Exceeding 8 Lakhs
+![No Tax Deducted Screenshot](https://example.com/no_tax_deducted.png)
 
-When the total income (after deductions) exceeds 8 Lakhs, the app correctly calculates the tax amount based on the user's age group and income level. The tax rates are applied as per the specified formula, ensuring accurate tax calculation for different age groups.
+### 3. Tax Calculation for Income Exceeding 8 Lakhs
+
+When the total income (after deductions) exceeds 8 Lakhs, the app correctly calculates the tax amount based on the user's age group and income level. The tax amount is deducted from the total income, and the remaining income after tax deduction is displayed on a modal. Below is a screenshot of this scenario:
+
+![Tax Calculation Exceeding 8 Lakhs Screenshot](https://example.com/tax_exceeding_8_lakhs.png)
+
+### 6. Handling Invalid Fields
+
+The app validates input fields to ensure that only numeric values are entered in number fields. If a user enters invalid input, error icons are displayed below the respective input fields, indicating the error. Below is a screenshot illustrating this scenario:
+
+![Invalid Fields Screenshot](https://example.com/invalid_fields.png)
+
+### 7. Handling Required Inputs
+
+The app ensures that all mandatory fields, such as the age group selection, are filled before submission. If a user attempts to submit the form without filling out required fields, a message is displayed prompting the user to fill the missing fields. Below is a screenshot depicting this scenario:
+
+![Required Inputs Missing Screenshot](https://example.com/required_inputs_missing.png)
 
 ## Installation Instructions
 
@@ -55,9 +71,9 @@ When the total income (after deductions) exceeds 8 Lakhs, the app correctly calc
 
 ## Live Demo
 
-[https://vaishnavi-kahar.github.io/FYLE_assignment/]
+Live demo is availbale [here](https://vaishnavi-kahar.github.io/FYLE_assignment/)
 
 
 
-- Vaishnavi Kahar
+By Vaishnavi Kahar
 
